@@ -1,0 +1,24 @@
+name: "ConnectIQ Tester"
+description: "Test a ConnectIQ application"
+inputs:
+  path:
+    description: "The path of the application to test"
+    required: true
+    default: .
+  device:
+    description: "The id of the device used to run the tests"
+    required: true
+    default: fenix7
+  certificate:
+    description: "The path of the certificate used to compile the application relatively to the path of the application"
+    required: false
+outputs:
+  status:
+    description: "'success' if tests succeeded, 'failure' if not"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{inputs.path}}
+    - ${{inputs.device}}
+    - ${{inputs.certificate}}
