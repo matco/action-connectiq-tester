@@ -22,3 +22,6 @@ runs:
     - ${{inputs.path}}
     - ${{inputs.device}}
     - ${{inputs.certificate}}
+branding:
+  icon: 'triangle'
+  color: 'blue'
