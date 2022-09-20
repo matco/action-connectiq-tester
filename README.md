@@ -8,7 +8,7 @@ Here is sample step to test your application in your CI workflows:
 ```
 - name: Test application
   id: run_tests
-  uses: matco/connectiq-tester@v1
+  uses: matco/action-connectiq-tester@v1
   with:
     device: fenix5
 ```
