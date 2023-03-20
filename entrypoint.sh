@@ -45,10 +45,9 @@ info "Test finished with result code $result"
 #set output variable
 if [[ $result -eq 0 ]];
 then
-	echo "::set-output name=status::success"
+	echo "status=success" >> "$GITHUB_OUTPUT"
 else
-	echo "::set-output name=status::failure"
-
+	echo "status=failure" >> "$GITHUB_OUTPUT"
 fi
 
 exit "$result"
