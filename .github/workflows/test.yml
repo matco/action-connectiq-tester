@@ -21,7 +21,7 @@ jobs:
         uses: ./
         with:
           path: test/app
-          device: fenix7
+          device: fr945
         continue-on-error: true
       - name: Check that action returned a failure status
         if: steps.test_not_working.outputs.status != 'failure'
@@ -35,7 +35,7 @@ jobs:
         uses: ./
         with:
           path: test/app
-          device: fenix7
+          device: fr945
         continue-on-error: true
       - name: Check that action returned a success status
         if: steps.test_working.outputs.status != 'success'
@@ -50,7 +50,7 @@ jobs:
         uses: ./
         with:
           path: test/app
-          device: fenix7
+          device: fr945
           certificate: key.der
         continue-on-error: true
       - name: Check that action returned a success status
